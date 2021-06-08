@@ -1,0 +1,30 @@
+{
+  "version": "0.0.0",
+  "scripts": {
+    "css:scss": "sass src/scss/style.scss src/css/style.css --no-source-map",
+    "css:autoprefixer": "postcss -u autoprefixer -r src/css/*.css",
+    "css:minify": "minify src/css/style.css > dist/src/css/style.css",
+    "build:html": "html-minifier --collapse-whitespace --remove-comments --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true index.html > dist/index.html",
+    "build:css": "run-s css:*",
+    "build:js": "minify src/js/main.js > dist/src/js/main.js",
+    "watch:css": "onchange \"src/scss/style.scss\" -- npm run css:scss",
+    "build:images": "imagemin src/images/**/* --out-dir=dist/src/images",
+    "clean": "rimraf dist",
+    "dev": "vite",
+    "serve": "vite preview",
+    "watch": "run-p dev watch:*",
+    "build": "npm run clean && mkdir -p dist/src/css dist/src/images dist/src/js && run-p build:*"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.2.6",
+    "html-minifier": "^4.0.0",
+    "imagemin-cli": "^3.0.0",
+    "minify": "^7.0.2",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.1.0",
+    "postcss-cli": "^8.3.1",
+    "rimraf": "^2.7.1",
+    "scss": "^0.2.4",
+    "vite": "^2.3.5"
+  }
+}
