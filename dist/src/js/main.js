@@ -1,1 +1,0 @@
-const openAlert=()=>{const e=document.querySelector(".message"),t=document.querySelector(".overlay");e.style.display="flex",t.style.display="block"};document.addEventListener("keypress",(e=>{"Space"===e.code&&openAlert()}));
