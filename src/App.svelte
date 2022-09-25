@@ -8,7 +8,7 @@
 </svelte:head>
 <section>
     <div class="wrapper">
-        <h2>Under maintenance...</h2>
-        <a href="https://github.com/mhdafh7"><h4>- Visit github -</h4></a>
+        <h2>Moved to a better domain!!</h2>
+        <a href="https://www.mhdafh.codes"><h4>- Visit new Domain -</h4></a>
     </div>
 </section>
